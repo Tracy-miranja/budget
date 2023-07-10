@@ -40,18 +40,29 @@
     .animate-heading.stopped {
       animation: none;
     }
+
+    .hide {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="row track">
-      <h1 class="animate-heading">Welcome to <br>Transaction Cost</h1>
-      <p>
-        <a href="/users/sign_up">Sign up</a> |
-        <a href="/users/sign_in">Log in</a>
-      </p>
-    </div>
-  </div>
+<div class="container">
+<div class="row track">
+  <h1 id="animate-heading" class="animate-heading">Welcome to <br>Transaction Cost</h1>
+  <p id="links" class="hide">
+    <a href="/users/sign_up">Sign up</a> |
+    <a href="/users/sign_in">Log in</a>
+  </p>
+</div>
+  <script>
+  const heading = document.getElementById('animate-heading');
+  const links = document.getElementById('links');
 
+  heading.addEventListener('animationend', () => {
+    heading.classList.add('show');
+    links.classList.remove('hide');
+  });
+</script>
 </body>
 </html>
