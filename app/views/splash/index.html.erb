@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Transaction</title>
+  <style>
+    /* Centering styles */
+    html, body {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color:blue;
+      color:#fff;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .track {
+      margin-bottom: 20px;
+    }
+
+    /* Animation */
+    @keyframes slideIn {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .animate-heading {
+      animation: slideIn 1s ease-in-out ;
+    }
+
+    .animate-heading.stopped {
+      animation: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row track">
+      <h1 class="animate-heading">Welcome to <br>Transaction Cost</h1>
+      <p>
+        <a href="/users/sign_up">Sign up</a> |
+        <a href="/users/sign_in">Log in</a>
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
