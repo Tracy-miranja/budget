@@ -8,4 +8,5 @@ class User < ApplicationRecord
          
          attr_accessor :name
          attribute :locked_at, :datetime
+         has_many :categories
 end

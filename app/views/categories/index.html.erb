@@ -1,0 +1,31 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <% @categories.each do |category| %>
+      <div class="row catago" onclick="window.location.href='<%= expenses_path(category) %>'">
+        <div class="col">
+          <div class="image-container">
+            <% if category.image.attached? %>
+              <%= image_tag url_for(category.image), class: "img-thumbnail" %>
+            <% else %>
+              <p>No Image</p>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="col">
+          <p><%= category.name %></p>
+          <% created_date = category.created_at.strftime('%e%p %B %Y').strip %>
+          <% formatted_date = created_date.sub(/\d+(st|nd|rd|th)/, '\1') %>
+          <p><%= formatted_date %></p>
+        </div>
+
+        <div class="col">
+          <p><%= number_to_currency(category.expenses.sum(:amount), unit: '$') %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to "New category", new_category_path %>
+</div>
