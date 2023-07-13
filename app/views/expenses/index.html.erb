@@ -1,10 +1,9 @@
 <p style="color: green"><%= notice %></p>
-<%= render "categories/header" %>
 
 <h1>Expenses</h1>
 
 <div class="container">
-<%= render "categories/header" %>
+
   <% @categories.each do |category| %>
     <div class="col expe">
     <p>Total Amount: <%= number_to_currency(category.expenses.sum(:amount), unit: '$') %></p>
