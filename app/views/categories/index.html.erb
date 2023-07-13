@@ -3,6 +3,7 @@
 <div class="container">
   <div class="row">
     <% @categories.each do |category| %>
+      
       <div class="row catago" onclick="window.location.href='<%= expenses_path(category) %>'">
         <div class="col">
           <div class="image-container">
