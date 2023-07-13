@@ -1,0 +1,42 @@
+/* Centering styles */
+html, body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .track {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  /* Animation */
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-heading {
+    animation: slideIn 2s ease-in-out;
+  }
+  
+  .animate-heading.stopped {
+    animation: none;
+  }
+  
+  .hide {
+    display: none;
+  }
+  

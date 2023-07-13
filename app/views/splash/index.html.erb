@@ -1,68 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Transaction</title>
-  <style>
-    /* Centering styles */
-    html, body {
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color:blue;
-      color:#fff;
-    }
 
-    .container {
-      text-align: center;
-    }
 
-    .track {
-      margin-bottom: 20px;
-    }
-
-    /* Animation */
-    @keyframes slideIn {
-      0% {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
-    .animate-heading {
-      animation: slideIn 2s ease-in-out ;
-    }
-
-    .animate-heading.stopped {
-      animation: none;
-    }
-
-    .hide {
-      display: none;
-    }
-  </style>
-</head>
-<body>
-<div class="container">
-<div class="row track">
-  <h1 id="animate-heading" class="animate-heading">Welcome to <br>Transaction Cost</h1>
-  <p id="links" class="hide">
-    <a href="/users/sign_up">Sign up</a> |
-    <a href="/users/sign_in">Log in</a>
-  </p>
+<div class="container-fluid truck">
+  <div class="row heading">
+    <h1>TransactionCost</h1>
+  </div>
+  <div class="row actions in">
+  <div class="col text-center">
+  <%= link_to "LOG IN", user_session_path, class: "white-link" %>
+  </div>
 </div>
-  <script>
-  const heading = document.getElementById('animate-heading');
-  const links = document.getElementById('links');
+  <div class="row actions up">
+  <div class="col text-center">
+    <%= link_to "SIGN UP", new_user_registration_path, class: "white" %>
+    </div>
+  </div>
+ 
+</div>
 
-  heading.addEventListener('animationend', () => {
-    heading.classList.add('show');
-    links.classList.remove('hide');
-  });
-</script>
-</body>
-</html>
