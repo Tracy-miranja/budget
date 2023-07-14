@@ -201,6 +201,30 @@ body {
   text-align: center; /* Align the links at the center within the row */
 }
 
+.new{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0px;
+  height: 65vh;
+  
+}
+
+.new2{
+  display: flex;
+  height: 70px;
+  background-color:#5fb523;
+  justify-content: center;
+  padding: 10px;
+}
+
+.cl{
+  background-color: #5fb523;
+  height: 50px;
+  color: #fff;
+  border-color: #fff;
+  
+}
+
 .white-link {
   color: white;
   text-align: center;
@@ -214,3 +238,35 @@ body {
   font-family: lato, sans-serif;
 }
 
+.delete-icon{
+  width: 30px;
+  height: 20px;
+  margin-bottom: 5px;
+  border-color: #fff;
+}
+
+.edit-icon{
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.back-icon{
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+.head{
+  text-align: center;
+}
+
+.exp{
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.shw{
+  margin-bottom: 10px;
+  justify-content: center;
+}

@@ -5,11 +5,22 @@ class ExpensesController < ApplicationController
   def index
     @expenses = Expense.all.order(created_at: :desc)
     @categories = Category.all
+    
   end
 
   # GET /expenses/1 or /expenses/1.json
   def show
+    @expense = Expense.find(params[:id])
+    @category = @expense.category
+    @expenses = @category.expenses.order(created_at: :desc)
+    @total_amount = @category.expenses.sum(:amount)
+  
+    if @expense.nil?
+      flash.now[:notice] = "No expense for this category."
+    end
   end
+  
+  
 
   # GET /expenses/new
   def new

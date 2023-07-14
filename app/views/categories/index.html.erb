@@ -1,10 +1,7 @@
-<p style="color: green"><%= notice %></p>
-
 <div class="container">
   <div class="row">
     <% @categories.each do |category| %>
-      
-      <div class="row catago" onclick="window.location.href='<%= expenses_path(category) %>'">
+      <div class="row catago" onclick="window.location.href='<%= category.expenses.present? ? expense_path(category.expenses.first) : new_expense_path(category_id: category.id) %>';">
         <div class="col">
           <div class="image-container">
             <% if category.image.attached? %>
@@ -23,7 +20,17 @@
         </div>
 
         <div class="col">
-          <p><%= number_to_currency(category.expenses.sum(:amount), unit: '$') %></p>
+          <% expense = category.expenses.first %>
+          <% if expense %>
+            <p><%= number_to_currency(expense.amount, unit: '$') %></p>
+          <% else %>
+            <p>No Expense</p>
+          <% end %>
+          <% if category.expenses.present? %>
+            <%= link_to "View Expense", expense_path(category.expenses.first) %>
+          <% else %>
+            <%= link_to "Create Expense", new_expense_path(category_id: category.id) %>
+          <% end %>
         </div>
       </div>
     <% end %>

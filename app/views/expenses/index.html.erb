@@ -3,9 +3,7 @@
 <div class="container">
 
   <% @categories.each do |category| %>
-    <div class="col expe">
-    <h3>Total Amount: <%= number_to_currency(category.expenses.sum(:amount), unit: '$') %></h3>
-    </div>
+    
     <div class="row category-total">
    
       <div class="col expense">

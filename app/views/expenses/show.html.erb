@@ -1,10 +1,48 @@
 <p style="color: green"><%= notice %></p>
+<%= link_to categories_path do %>
+  <%= image_tag 'back-icon.png', alt: 'Back', class: 'back-icon' %>
+<% end %>
+<p style="color: green"><%= notice %></p>
 
-<%= render @expense %>
+<div class="container-fluid new">
+  <div class="row justify-content-center">
+    <div class="col-8">
+      <div class="row head">
+        <h2><%= @category.name %></h2>
+        <p><%= @category.created_at.strftime('%e%p %B %Y').strip %></p>
+      </div>
 
-<div>
-  <%= link_to "Edit this expense", edit_expense_path(@expense) %> |
-  <%= link_to "Back to expenses", expenses_path %>
-
-  <%= button_to "Destroy this expense", @expense, method: :delete %>
+      <div class="row shw">
+        <% if @category.expenses.present? %>
+          <% @expenses.each do |expense| %>
+            <div class="row">
+              <div class="col">
+                <h5><%= expense.name %> - <%= number_to_currency(expense.amount, unit: '$') %></h5>
+              </div>
+              <div class="col">
+                <%= link_to expense, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <%= image_tag 'blue-delete.png', alt: 'Delete', class: 'delete-icon' %>
+                <% end %>
+              </div>
+              <div class="col">
+                <%= link_to edit_expense_path(expense) do %>
+                  <%= image_tag 'edit-icon.png', alt: 'Edit', class: 'edit-icon' %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        <% else %>
+          <p>No expenses for this category.</p>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
+
+<footer class="container-fluid ">
+  <div class="row justify-content-center new2">
+    
+      <%= link_to "Create Expense", new_expense_path(category_id: @category.id), class: "btn  cl" %>
+    </div>
+ 
+</footer>
