@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <% @categories.each do |category| %>
-      <div class="row catago" onclick="window.location.href='<%= category.expenses.present? ? expense_path(category.expenses.first) : new_expense_path(category_id: category.id) %>';">
+      <div class="row catago" onclick="window.location.href='<%= category.expenses.present? ? expense_path(category.expenses.first) : expenses_path(category_id: category.id) %>';">
         <div class="col">
           <div class="image-container">
             <% if category.image.attached? %>
@@ -28,12 +28,10 @@
           <% end %>
           <% if category.expenses.present? %>
             <%= link_to "View Expense", expense_path(category.expenses.first) %>
-          <% else %>
-            <%= link_to "Create Expense", new_expense_path(category_id: category.id) %>
           <% end %>
         </div>
       </div>
     <% end %>
   </div>
-  <%= link_to "New category", new_category_path %>
+  <%= link_to "New category", new_category_path, class: "btn btn-primary"  %>
 </div>

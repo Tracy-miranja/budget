@@ -9,4 +9,5 @@ class User < ApplicationRecord
          attr_accessor :name
          attribute :locked_at, :datetime
          has_many :categories
+         validates :name, presence: true, length: { maximum: 50 }
 end

@@ -2,7 +2,6 @@
 <%= link_to categories_path do %>
   <%= image_tag 'back-icon.png', alt: 'Back', class: 'back-icon' %>
 <% end %>
-<p style="color: green"><%= notice %></p>
 
 <div class="container-fluid new">
   <div class="row justify-content-center">
@@ -41,7 +40,6 @@
 
 <footer class="container-fluid ">
   <div class="row justify-content-center new2">
-    
       <%= link_to "Create Expense", new_expense_path(category_id: @category.id), class: "btn  cl" %>
     </div>
  
