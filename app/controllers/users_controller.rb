@@ -1,6 +1,10 @@
 class UsersController < ApplicationController
   def index
-    @users = User.all
+    if user_signed_in?
+      redirect_to categories_path
+    else
+      @users = User.all
+    end
   end
 
   def create
@@ -11,10 +15,6 @@ class UsersController < ApplicationController
       render :new
     end
   end
-
-  <% if user_signed_in? %>
-  redirect_to categories_path,
-<%end%>
 
   def update
     @user = User.find(params[:id])
