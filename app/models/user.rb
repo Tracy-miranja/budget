@@ -5,9 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :lockable, :trackable
 
-
-  attr_accessor :name
-
   attribute :locked_at, :datetime
   has_many :categories
   validates :name, presence: true, length: { maximum: 50 }
