@@ -1,5 +1,4 @@
 
-
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Playball&display=swap');
 
 :root {
@@ -24,121 +23,116 @@ body {
   color: var(--primary-color);
 }
 
- .card {
-    width: 300px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-form .field {
-    margin-bottom: 10px;
-  }
-  
-  .login-form .actions {
-    text-align: center;
-  }
-  
-  .card-header {
-    padding: .5rem 1rem;
-    margin-bottom: 0;
-    background-color: rgba(0,0,0,.03);
-    border-bottom: 1px solid rgba(0,0,0,.125);
-    margin-bottom: 10px;
-    text-align: center;
+.card {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
 }
 
-.form-group{
-    align-content: center;
-    text-align: center;
+.actions {
+  text-align: center;
+  margin-top: 10px;
 }
 
-.actions{
-    text-align: center;
-    margin-top: 10px; 
+.login-form {
+  display: flex;
+  flex-direction: column;
 }
 
-.track{
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+.login-form .field {
+  margin-bottom: 10px;
 }
 
-.cont{
-    text-align: center;
-    color: aliceblue;
+.login-form .actions {
+  text-align: center;
 }
 
-.navbar{
-    background-color: #3778c2;
-    box-shadow: 0 8px 16px rgb(64 83 252 / 24%);
+.card-header {
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  margin-bottom: 10px;
+  text-align: center;
 }
 
-.catago{
-    width: 100%;
-    height: 180px;
-    background-color: #fff;
-    margin-bottom: 20px ;
-    box-shadow: 0 8px 16px rgb(64 83 252 / 24%);
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+.form-group {
+  align-content: center;
+  text-align: center;
 }
 
-.gift{
-    height: 80px;
-    background-color: #fff;
-    margin-bottom: 20px ;
-    box-shadow: 0 8px 16px rgb(64 83 252 / 24%);
-    margin-right:0px ;
-    justify-content: center;
-    align-items: center;
-    align-content: space-between;
-    font-family: proxima Nova light;
-    
-    
+.track {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
-.gift h4{
+
+.cont {
+  text-align: center;
+  color: aliceblue;
+}
+
+.navbar {
+  background-color: #3778c2;
+  box-shadow: 0 8px 16px rgb(64 83 252 / 24%);
+}
+
+.catago {
+  max-width: 100%;
+  height: auto;
+  background-color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgb(64 83 252 / 24%);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.gift {
+  height: 80px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 16px rgb(64 83 252 / 24%);
+  margin-right: 0;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  font-family: proxima Nova light, sans-serif;
+}
+
+.gift h4 {
   margin-top: 2%;
-  
 }
 
-.flld{
+.flld {
   padding-left: 0%;
   padding-right: 0%;
   padding-top: 0%;
 }
 
-.sec{
+.sec {
   text-align: end;
 }
 
-.image-container{
-  height: 180px;
-  width: 80%;
+.image-container {
+  max-width: 100%;
+  height: auto;
 }
 
-.img-thumbnail{
-   width:100%;
-   height: 100%;
+.category-icon {
+  max-width: 100%;
+  height: auto;
 }
 
-.expense{
+.expense {
   display: grid;
   grid-template-rows: auto;
 }
 
-@import "font-awesome";
-
-.heading h1{
+.heading h1 {
   font-family: 'Playball', cursive;
   letter-spacing: 3px;
   color: var(--primary-color);
@@ -149,22 +143,21 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.in{
+.in {
   background-color: #3778c2;
   color: #fff;
   width: 100%;
   height: 70px;
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   justify-content: center;
   box-shadow: 0 8px 16px rgb(64 83 252 / 24%);
 }
 
-.in a{
+.in a {
   text-decoration: none;
   text-align: center;
   justify-content: center;
-  
 }
 
 .col.text-center {
@@ -172,14 +165,13 @@ body {
   align-items: center;
 }
 
-.up a{
+.up a {
   text-decoration: none;
   text-align: center;
   justify-content: center;
- 
 }
 
-.up{
+.up {
   color: #fff;
   width: 100%;
   height: 70px;
@@ -201,35 +193,32 @@ body {
   text-align: center; /* Align the links at the center within the row */
 }
 
-.new{
+.new {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   height: 65vh;
-  
 }
 
-.new2{
+.new2 {
   display: flex;
   height: 70px;
-  background-color:#5fb523;
+  background-color: #5fb523;
   justify-content: center;
   padding: 10px;
 }
 
-.cl{
+.cl {
   background-color: #5fb523;
   height: 50px;
   color: #fff;
   border-color: #fff;
-  
 }
 
 .white-link {
   color: white;
   text-align: center;
   justify-content: center;
-
 }
 
 .white {
@@ -238,35 +227,35 @@ body {
   font-family: lato, sans-serif;
 }
 
-.delete-icon{
+.delete-icon {
   width: 30px;
   height: 20px;
   margin-bottom: 5px;
   border-color: #fff;
 }
 
-.edit-icon{
+.edit-icon {
   width: 20px;
   height: 20px;
   margin-bottom: 5px;
 }
 
-.back-icon{
+.back-icon {
   width: 20px;
   height: 20px;
   margin-left: 20px;
 }
 
-.head{
+.head {
   text-align: center;
 }
 
-.exp{
+.exp {
   display: grid;
   grid-template-rows: auto;
 }
 
-.shw{
+.shw {
   margin-bottom: 10px;
   justify-content: center;
 }

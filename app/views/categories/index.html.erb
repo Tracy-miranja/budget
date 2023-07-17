@@ -4,11 +4,11 @@
       <div class="row catago" onclick="window.location.href='<%= category.expenses.present? ? expense_path(category.expenses.first) : expenses_path(category_id: category.id) %>';">
         <div class="col">
           <div class="image-container">
-            <% if category.image.attached? %>
-              <%= image_tag url_for(category.image), class: "img-thumbnail" %>
-            <% else %>
-              <p>No Image</p>
-            <% end %>
+          <% if category.icon.attached? %>
+          <%= image_tag category.icon, class: "category-icon img-fluid" %>
+        <% else %>
+          <p>No Image</p>
+        <% end %>
           </div>
         </div>
 
@@ -25,9 +25,6 @@
             <p><%= number_to_currency(expense.amount, unit: '$') %></p>
           <% else %>
             <p>No Expense</p>
-          <% end %>
-          <% if category.expenses.present? %>
-            <%= link_to "View Expense", expense_path(category.expenses.first) %>
           <% end %>
         </div>
       </div>

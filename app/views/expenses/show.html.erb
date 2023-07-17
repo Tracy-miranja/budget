@@ -19,7 +19,7 @@
                 <h5><%= expense.name %> - <%= number_to_currency(expense.amount, unit: '$') %></h5>
               </div>
               <div class="col">
-                <%= link_to expense, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <%= link_to expense, method: :delete, class:'btn',data: { confirm: 'Are you sure?' } do %>
                   <%= image_tag 'blue-delete.png', alt: 'Delete', class: 'delete-icon' %>
                 <% end %>
               </div>
