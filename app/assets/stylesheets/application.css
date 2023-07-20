@@ -75,19 +75,18 @@ body {
 
 .form-group {
   align-content: center;
-  /* text-align: center; */
   max-width: 100%;
 }
 
 .field {
   width: 100%;
-  box-sizing: border-box; /* This property ensures that padding and border are included in the width */
+  box-sizing: border-box; 
 }
 
-/* Assuming '.field input' targets the input elements inside the '.field' container */
+
 .field input {
-  width: 100%; /* This makes the input fields take full width inside the container */
-  box-sizing: border-box; /* This property ensures that padding and border are included in the width */
+  width: 100%; 
+  box-sizing: border-box; 
   padding: 10px;
   border-color: rgb(241, 237, 237);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -97,10 +96,9 @@ body {
   text-align: center;
 }
 
-/* Assuming '.btn-new2' class represents the container of the submit button */
 .btn-new2 {
   width: 100%;
-  text-align: center; /* This centers the submit button inside its container */
+  text-align: center; 
 }
 
 .track {
@@ -351,6 +349,10 @@ body {
   color: #fff;
 }
 
+.reg{
+  font-weight: bolder;
+}
+
 .header2{
   padding: 17px;
   background-color: #3778c2;
@@ -393,10 +395,15 @@ body {
   margin-left: 10px;
 }
 
-.col2{
+.col22{
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  font-weight: bolder;
+}
+
+.col2 a{
+  color: #fff;
 }
 
 .field {
