@@ -74,3 +74,5 @@ group :test do
 end
 gem 'devise', '~> 4.9', '>= 4.9.2'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.7'
+

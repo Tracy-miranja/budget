@@ -1,7 +1,13 @@
-<div class="card">
-  <div class="card-header">
-<h1>New Expense</h1>
-
+<div class="col header3">
+  <div class="row">
+    <div class="col-4 col1">
+      <%= link_to categories_path do %>
+        <%= image_tag 'back-arrow.png', alt: 'Back', class: 'back-icon' %>
+      <% end %>
+    </div>
+    <div class="col col2">New Expense</div>
+  </div>
+</div>
 <%= form_with(model: @expense, url: expenses_path, local: true) do |form| %>
   <% if @expense.errors.any? %>
     <div id="error_explanation">
@@ -16,24 +22,20 @@
   
 
   <div class="field form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, placeholder:"Name" %>
   </div>
 
   <div class="field form-group">
-    <%= form.label :amount %>
-    <%= form.number_field :amount %>
+    <%= form.number_field :amount, placeholder:"Amount" %>
   </div>
 
   <div class="field form-group">
-    <%= form.label :category_id %>
-    <%= form.collection_select :category_id, Category.all, :id, :name, prompt: true %>
+    <%= form.collection_select :category_id, Category.all, :id, :name, prompt: true, placeholder:"category_id" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit "Create Expense" %>
-  </div>
-<% end %>
-<%= link_to "Back", expenses_path %>
+  <div class="btn-new2">
+    <%= form.submit "Add transaction", class:"neew" %>
+    </div>
+  <% end %>
 </div>
 </div>

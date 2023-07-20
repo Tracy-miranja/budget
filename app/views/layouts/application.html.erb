@@ -15,10 +15,12 @@
     <%= javascript_importmap_tags %>
   </head>
   <body>
-  <% unless current_page?(root_path) || current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
+  <% if current_page?(categories_path) %>
   <%= render partial: 'categories/header', locals: { category: @category } %>
+  <% elsif current_page?(expenses_path) %>
+  <%= render partial: 'expenses/header', locals: { expense: @expense } %>
+  <% end %>
 
-<% end %>
   <%= yield %>
   
 

@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Playball&display=swap');
+/*
+ *= require font-awesome
+ */
 
 :root {
   --primary-color: #434b64;
@@ -22,6 +25,14 @@ body {
   color: var(--primary-color);
 }
 
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.0rem);
+  padding-left: var(--bs-gutter-x,.0rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .card {
   width: 300px;
   margin: 0 auto;
@@ -29,6 +40,11 @@ body {
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 20px;
+}
+
+.neew{
+  background-color: #5fb523;
+  border-color: #fff;
 }
 
 .actions {
@@ -59,7 +75,32 @@ body {
 
 .form-group {
   align-content: center;
+  /* text-align: center; */
+  max-width: 100%;
+}
+
+.field {
+  width: 100%;
+  box-sizing: border-box; /* This property ensures that padding and border are included in the width */
+}
+
+/* Assuming '.field input' targets the input elements inside the '.field' container */
+.field input {
+  width: 100%; /* This makes the input fields take full width inside the container */
+  box-sizing: border-box; /* This property ensures that padding and border are included in the width */
+  padding: 10px;
+  border-color: rgb(241, 237, 237);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.lnk{
   text-align: center;
+}
+
+/* Assuming '.btn-new2' class represents the container of the submit button */
+.btn-new2 {
+  width: 100%;
+  text-align: center; /* This centers the submit button inside its container */
 }
 
 .track {
@@ -90,6 +131,10 @@ body {
   align-items: center;
 }
 
+.catag{
+  height: 100vh;
+}
+
 .gift {
   height: 80px;
   background-color: #fff;
@@ -100,6 +145,7 @@ body {
   align-items: center;
   align-content: space-between;
   font-family: proxima Nova light, sans-serif;
+  padding: 15px;
 }
 
 .gift h4 {
@@ -196,7 +242,23 @@ body {
   display: flex;
   flex-direction: column;
   margin-bottom: 0;
-  height: 65vh;
+  height: 55vh;
+}
+
+.new3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  box-shadow: 0 8px 16px rgb(64 83 252 / 24%);
+}
+
+.nameex{
+  text-align: center;
+}
+
+.nameex2{
+  text-align: center;
 }
 
 .new2 {
@@ -205,10 +267,12 @@ body {
   background-color: #5fb523;
   justify-content: center;
   padding: 10px;
+  margin-bottom: 0%;
 }
 
 .cl {
   background-color: #5fb523;
+  width: 80%;
   height: 50px;
   color: #fff;
   border-color: #fff;
@@ -257,4 +321,84 @@ body {
 .shw {
   margin-bottom: 10px;
   justify-content: center;
+}
+
+.btn-new{
+    text-align: center;
+    background-color: var(--tertiary-color);
+    padding: 17px;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    color: #fff;
+}
+
+.neew{
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px 0;
+  border: 2px solid rgb(217, 217, 217);
+  color: rgb(239, 239, 239);
+  cursor: pointer;
+}
+
+.navbar-toggler-icon{
+  float: left;
+}
+
+#next-button{
+  color: #fff;
+}
+
+.header2{
+  padding: 17px;
+  background-color: #3778c2;
+  color: #fff;
+  text-align: center;
+  margin: 0%;
+  display: grid;
+  grid-template-columns:auto, auto ;
+}
+
+.header3{
+  padding: 17px;
+  background-color: #3778c2;
+  color: #fff;
+  text-align: center;
+  margin: 0%;
+  display: grid;
+  grid-template-columns:auto, auto ;
+}
+.fa-solid{
+  color: #fff;
+  font-size: 12px;
+}
+
+.btn-new2{
+    text-align: center;
+    background-color: var(--tertiary-color);
+    padding: 17px;
+    /* padding-right: 5px; */
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    color: #fff;
+}
+
+.col1 img{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.col2{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.field {
+  width: 100%;
 }

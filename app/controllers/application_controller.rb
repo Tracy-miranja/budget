@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include ActionView::Helpers::UrlHelper
+
   before_action :configure_permitted_parameters, if: :devise_controller?
   def after_sign_in_path_for(_resource)
     categories_path
